@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* ═══════════════════════════════════════════════════════
+   MOORIA GROUP — MODERN B2B EDITORIAL DESIGN SYSTEM
+   Palette: Royal Navy · Corporate Black · Crimson Accent · Snow Canvas · Slate Gray
+   Fonts: Satoshi / Plus Jakarta Sans
+═══════════════════════════════════════════════════════ */
+
+:root {
+  --co-parchment:     #FAFAFF; /* Snow Canvas bg */
+  --co-parchment-2:   #EDF2F7; /* Slate Gray surfaces */
+  --co-ink:           #0F1115; /* Corporate Black - Headings */
+  --co-ink-mid:       #0F1115; /* Body text */
+  --co-ink-muted:     #002855; /* Royal Navy - Meta, Captions */
+  --co-terra:         #B80C09; /* Crimson Accent */
+  --co-terra-light:   #EDF2F7; /* Borders, dividers */
+  --co-rule:          #EDF2F7; /* Divider lines */
+  --font-display:     'Satoshi', 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-ui:          'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+/* ── Page shell ── */
+.co-page {
+  background-color: var(--co-parchment);
+ 
+  font-family: var(--font-ui);
+}
+
+.co-not-found {
+  background: var(--co-parchment);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--co-ink-muted);
+}
+
+/* ── Main layout ── */
+.co-main {
+  max-width: 900px;
+  margin: 0 auto;
+
+}
+
+/* ── Header ── */
+.co-header {
+  text-align: center;
+ 
+}
+
+.co-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 900;
+  line-height: 1.1;
+ 
+  color: var(--co-ink);
+  max-width: 900px;
+  margin: 0 auto 32px;
+  letter-spacing: -0.02em;
+}
+
+/* ── Meta row ── */
+.co-meta { margin-top: 8px; }
+.co-meta-divider {
+  height: 1px;
+  background: var(--co-terra-light);
+  margin: 16px 0;
+}
+.co-meta-row {
+  display: flex; align-items: center; justify-content: center; gap: 32px; flex-wrap: wrap;
+}
+
+.co-author { display: flex; align-items: center; gap: 12px; }
+.co-author-avatar {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--co-ink-muted); border: 1.5px solid var(--co-terra);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-weight: 700; font-size: 13px;
+  color: var(--co-parchment); letter-spacing: 0.03em; flex-shrink: 0;
+}
+.co-author-info { display: flex; flex-direction: column; gap: 2px; text-align: left; }
+.co-author-name { font-size: 11px; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; color: var(--co-ink); }
+.co-date { font-size: 11px; color: var(--co-terra); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
+
+.co-readtime { display: flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--co-ink-muted); }
+.co-clock-icon { width: 13px; height: 13px; stroke: var(--co-terra); flex-shrink: 0; }
+
+/* ── Hero image ── */
+.co-hero { margin-bottom: 72px; position: relative; }
+.co-hero-frame {
+  position: relative; width: 100%; border-radius: 16px; overflow: hidden;
+  border: 1px solid var(--co-terra-light);
+}
+.co-hero-img { width: 100%; height: auto; object-fit: cover; display: block; transition: transform 2.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+.co-hero-frame:hover .co-hero-img { transform: scale(1.025); }
+.co-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 60%, rgba(15, 17, 21, 0.2)); pointer-events: none; }
+.co-hero-label { margin-top: 14px; text-align: right; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--co-ink-muted); font-family: var(--font-ui); }
+
+/* ── Content section ── */
+.co-content-section { padding: 0; max-width: 720px; margin: 0 auto; }
+
+/* ── MOORIA CONTENT — prose styles ── */
+.clay-content { font-family: var(--font-ui); color: var(--co-ink-mid); }
+.clay-content h2 { font-family: var(--font-display); font-size: 2rem; font-weight: 800; text-transform: uppercase; color: var(--co-ink); margin-top: 3rem; margin-bottom: 0.5rem; padding-left: 1.1rem; border-left: 3px solid var(--co-terra); line-height: 1.2; letter-spacing: -0.01em; }
+.clay-content h3 { font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; text-transform: uppercase; color: var(--co-ink-muted); margin-top: 2rem; margin-bottom: 0.25rem; letter-spacing: 0.01em; }
+.clay-content p { line-height: 1.8; margin-top: 1.1rem; font-size: 16px; font-weight: 400; opacity: 0.85; }
+.clay-content a { color: var(--co-ink-muted); text-decoration: underline; text-underline-offset: 3px; font-weight: 700; transition: all 0.2s; }
+.clay-content a:hover { color: var(--co-terra); }
+/* ── MOORIA B2B SPECIFICATION TABLES ── */
+.clay-content table {
+  width: 100%;
+  margin: 2.5rem 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-family: var(--font-ui);
+  font-size: 14px;
+  color: #002855;
+  background-color: #FFFFFF;
+  border: 1px solid #EDF2F7;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(15, 17, 21, 0.04);
+}
+
+/* Header Cells */
+.clay-content table th {
+  background-color: #002855;
+  color: #FFFFFF;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 2px solid #B80C09;
+}
+
+/* Body Cells */
+.clay-content table td {
+  padding: 14px 18px;
+  color: #0F1115;
+  font-weight: 500;
+  border-bottom: 1px solid #EDF2F7;
+  line-height: 1.6;
+}
+
+/* Zebra Striping for readability */
+.clay-content table tbody tr:nth-child(even) {
+  background-color: #FAFAFF;
+}
+
+/* Hover State on rows */
+.clay-content table tbody tr:hover {
+  background-color: #EDF2F7;
+  transition: background-color 0.2s ease;
+}
+
+/* Remove bottom border for last row */
+.clay-content table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Responsive Table Wrapper for Mobile */
+@media (max-width: 640px) {
+  .clay-content table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    font-size: 13px;
+  }
+  .clay-content table th,
+  .clay-content table td {
+    padding: 10px 14px;
+  }
+}
+.clay-content blockquote { margin: 2.5rem 0; padding: 2rem 2rem 2rem 2.5rem; background: var(--co-ink); border-left: 4px solid var(--co-terra); color: var(--co-parchment); position: relative; border-radius: 8px; }
+.clay-content blockquote p { font-family: var(--font-display); font-size: 1.25rem; line-height: 1.6; color: var(--co-parchment); margin: 0; font-weight: 600; opacity: 0.95; }
+
+/* Gallery images injected into content */
+.co-gallery-figure { margin: 3rem 0; width: 100%; overflow: hidden; }
+.co-gallery-frame { border-radius: 12px; overflow: hidden; border: 1px solid var(--co-terra-light); }
+.co-gallery-img { width: 100%; height: auto; object-fit: cover; display: block; transition: transform 1s ease-in-out; }
+.co-gallery-frame:hover .co-gallery-img { transform: scale(1.04); }
+.co-gallery-caption { margin-top: 12px; text-align: center; font-family: var(--font-ui); font-size: 12px; font-weight: 600; color: var(--co-ink-muted); letter-spacing: 0.05em; text-transform: uppercase; }
+
+/* ── Footer CTA ── */
+.co-cta-footer { margin-top: 96px; padding-top: 64px; border-top: 1px solid var(--co-terra-light); }
+.co-cta-inner { background: var(--co-ink-muted); border-radius: 24px; padding: 56px 64px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 24px; position: relative; overflow: hidden; }
+.co-cta-ornament { font-size: 12px; color: var(--co-terra); letter-spacing: 0.4em; }
+.co-cta-text { position: relative; }
+.co-cta-eyebrow { font-size: 10px; font-weight: 800; letter-spacing: 0.3em; text-transform: uppercase; color: var(--co-terra); margin-bottom: 8px; }
+.co-cta-headline { font-family: var(--font-display); font-size: 2.8rem; font-weight: 900; text-transform: uppercase; color: #FFFFFF; line-height: 1; margin-bottom: 12px; }
+.co-cta-headline em { color: var(--co-parchment); font-style: normal; font-weight: 300; }
+.co-cta-sub { font-size: 14px; font-weight: 400; color: rgba(255, 255, 255, 0.7); max-width: 360px; margin: 0 auto; line-height: 1.7; }
+.co-cta-btn { position: relative; display: inline-flex; align-items: center; gap: 8px; padding: 14px 36px; background: #FFFFFF; color: var(--co-ink-muted); font-family: var(--font-ui); font-size: 11px; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; border-radius: 12px; transition: background 0.25s, transform 0.2s; outline: none; border: none; cursor: pointer; }
+.co-cta-btn:hover { background: var(--co-parchment); transform: translateY(-1px); }
+.co-cta-icon { width: 14px; height: 14px; transition: transform 0.2s; }
+.co-cta-btn:hover .co-cta-icon { transform: translate(2px, -2px); }
+
+@media (max-width: 640px) {
+  .co-main { padding: 0 16px 72px; }
+  .co-cta-inner { padding: 40px 28px; }
+  .co-cta-headline { font-size: 2rem; }
+  .clay-content h2 { font-size: 1.5rem; }
+  .clay-content blockquote p { font-size: 1.1rem; }
+}
